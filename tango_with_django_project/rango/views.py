@@ -16,6 +16,7 @@ def index(request):
 
    context_dict = {}
    context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
+   context_dict['category'] = None
    context_dict['categories'] = category_list
    context_dict['pages'] = page_list
 
@@ -25,7 +26,11 @@ def index(request):
 
 def about(request):
     
-    context_dict = {'boldmessage':'This tutorial has been put together by Ire'}
+    context_dict = {
+    'boldmessage': 'This tutorial has been put together by Ire',
+    'category': None,
+}
+
     return render(request, 'rango/about.html',context=context_dict)
 
 
